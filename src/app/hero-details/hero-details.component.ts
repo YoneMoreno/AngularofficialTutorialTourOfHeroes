@@ -2,7 +2,7 @@ import {Component, OnInit, Input} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {MyHeroService} from '../my-hero.service';
 import {Location} from '@angular/common';
-import {Hero} from "../Hero";
+import {Hero} from '../Hero';
 
 @Component({
   selector: 'app-hero-details',
@@ -17,7 +17,7 @@ export class HeroDetailsComponent implements OnInit {
               private location: Location) {
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.getHero();
   }
 
