@@ -17,12 +17,12 @@ import {AppRoutingModule} from "./app-routing.module";
     AppComponent,
     HeroesComponent,
     HeroDetailsComponent,
-    MessagesComponent,
-    AppRoutingModule
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [MyHeroService, MessageService],
   bootstrap: [AppComponent]
