@@ -5,10 +5,11 @@ import {NgModule} from '@angular/core';
 import {AppComponent} from './app.component';
 import {HeroesComponent} from './heroes/heroes.component';
 import {FormsModule} from "@angular/forms";
-import { HeroDetailsComponent } from './hero-details/hero-details.component';
+import {HeroDetailsComponent} from './hero-details/hero-details.component';
 import {MyHeroService} from "./my-hero.service";
-import { MessagesComponent } from './messages/messages.component';
-import { MessageService } from './message.service';
+import {MessagesComponent} from './messages/messages.component';
+import {MessageService} from './message.service';
+import {AppRoutingModule} from "./app-routing.module";
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { MessageService } from './message.service';
     AppComponent,
     HeroesComponent,
     HeroDetailsComponent,
-    MessagesComponent
+    MessagesComponent,
+    AppRoutingModule
   ],
   imports: [
     BrowserModule,
