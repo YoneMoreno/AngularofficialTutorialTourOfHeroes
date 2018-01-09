@@ -1,25 +1,15 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {MessageService} from '../message.service';
 
-import { MessagesComponent } from './messages.component';
+describe('MessageService', () => {
 
-describe('MessagesComponent', () => {
-  let component: MessagesComponent;
-  let fixture: ComponentFixture<MessagesComponent>;
+  describe('addMessage', () => {
+    it('should add the message to the array', () => {
+      let messages: string[] = [];
+      const messageService = new MessageService(messages);
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ MessagesComponent ]
-    })
-    .compileComponents();
-  }));
+      messageService.add('Hero message');
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(MessagesComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
+      expect(messageService.getMessages().length).toBe(1);
+    });
   });
 });
