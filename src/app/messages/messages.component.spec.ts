@@ -3,13 +3,14 @@ import {MessageService} from '../message.service';
 describe('MessageService', () => {
 
   describe('addMessage', () => {
-    it('should add the message to the array', () => {
+    it('should add the message to the array and to be equals to the added one', () => {
       const messages: string[] = [];
       const messageService = new MessageService(messages);
 
       messageService.add('Hero message');
 
       expect(messageService.getMessages().length).toBe(1);
+      expect(messageService.getMessages()[0].toString()).toEqual('Hero message');
     });
 
     describe('clearMessage', () => {
