@@ -1,5 +1,5 @@
 import {DashboardComponent} from './dashboard.component';
-import {MyHeroService} from '../my-hero.service';
+import {MyHeroService} from '../hero-service/my-hero.service';
 import {MessageService} from '../message.service';
 
 describe('getHeroes', () => {
