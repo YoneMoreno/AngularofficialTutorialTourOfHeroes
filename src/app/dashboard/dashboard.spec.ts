@@ -16,8 +16,10 @@ describe('ngOnInit in dashboard', () => {
   it('should call getHeroes()', () => {
     const messages: string[] = [];
     const dashboard = new DashboardComponent(new MyHeroService(new MessageService(messages)));
+    spyOn(dashboard, 'getHeroes');
 
-    spyOn(dashboard, 'ngOnInit');
+    dashboard.ngOnInit();
 
+    expect(dashboard.getHeroes).toHaveBeenCalled();
   });
 });
