@@ -2,6 +2,16 @@ import {MessageService} from '../message.service';
 
 describe('MessageService', () => {
 
+  describe('getMessage', () => {
+    it('should return the messages array', () => {
+      const messages: string[] = ['anyMessage', 'newMessage', 'yourNewMessage'];
+      const messageService = new MessageService(messages);
+
+      expect(messageService.getMessages()).toEqual(messages);
+
+    });
+  });
+
   describe('addMessage', () => {
     it('should add the message to the array and to be equals to the added one', () => {
       const messages: string[] = [];
